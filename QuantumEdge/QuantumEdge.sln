@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{11DF770E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Domain", "QuantumEdge.Domain\QuantumEdge.Domain.csproj", "{9F0A8992-F7DE-4541-B710-1F3DF15CD164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Applicatiuon", "QuantumEdge.Applicatiuon\QuantumEdge.Applicatiuon.csproj", "{39F92333-B2CB-4541-B0A1-6479BCB8A3C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Application", "QuantumEdge.Applicatiuon\QuantumEdge.Application.csproj", "{39F92333-B2CB-4541-B0A1-6479BCB8A3C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Infrastructure", "QuantumEdge.Infrastructure\QuantumEdge.Infrastructure.csproj", "{41EA96A2-8749-47B0-9FA9-D72095F98D6C}"
 EndProject
