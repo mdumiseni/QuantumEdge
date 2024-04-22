@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QuantumEdge.Applicatiuon\QuantumEdge.Application.csproj" />
+    <ProjectReference Include="..\QuantumEdge.Domain\QuantumEdge.Domain.csproj" />
+    <ProjectReference Include="..\QuantumEdge.Infrastructure\QuantumEdge.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

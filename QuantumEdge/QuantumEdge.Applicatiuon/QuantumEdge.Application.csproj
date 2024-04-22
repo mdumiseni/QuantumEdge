@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QuantumEdge.Domain\QuantumEdge.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
