@@ -1,4 +1,4 @@
-﻿namespace QuantumEdge.Application.Interfaces.BrokerServices.AlpacaService.Model;
+﻿namespace QuantumEdge.Application.Common.Model;
 
 public class ResultSet<T>
 {

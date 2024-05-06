@@ -1,5 +1,5 @@
 using Alpaca.Markets;
-using QuantumEdge.Application.Interfaces.BrokerServices.AlpacaService.Model;
+using QuantumEdge.Application.Common.Model;
 
 namespace QuantumEdge.Application.Interfaces.BrokerServices.AlpacaService.Interfaces;
 

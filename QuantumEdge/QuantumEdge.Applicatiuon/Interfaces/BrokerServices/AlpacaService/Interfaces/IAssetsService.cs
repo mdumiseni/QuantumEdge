@@ -5,5 +5,5 @@ namespace QuantumEdge.Application.Interfaces.BrokerServices.AlpacaService.Interf
 public interface IAssetsService
 {
     Task<IReadOnlyList<IAsset>> GetAssetList();
-    Task<bool> isAssetTradable(string ticker);
+    Task<bool> isAssetTradeable(string ticker);
 }

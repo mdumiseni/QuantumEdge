@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QuantumEdge.Domain.Entities;
 
 namespace QuantumEdge.Infrastructure.EntityFramework;
 
@@ -13,4 +9,6 @@ public class QuantumEdgeDbContext : DbContext
     {
         
     }
+    public DbSet<ApplicationUser> User { get; set; }
+    public DbSet<Account> Account { get; set; }
 }

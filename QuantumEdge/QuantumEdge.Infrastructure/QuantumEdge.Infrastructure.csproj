@@ -15,4 +15,8 @@
     <ProjectReference Include="..\QuantumEdge.Applicatiuon\QuantumEdge.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EntityFramework\Migrations\" />
+  </ItemGroup>
+
 </Project>

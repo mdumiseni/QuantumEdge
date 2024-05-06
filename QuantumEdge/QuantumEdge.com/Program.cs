@@ -1,4 +1,6 @@
+using QuantumEdge.Application;
 using QuantumEdge.com.Components;
+using QuantumEdge.Domain;
 using QuantumEdge.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+//builder.Services.AddDomainServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
 
