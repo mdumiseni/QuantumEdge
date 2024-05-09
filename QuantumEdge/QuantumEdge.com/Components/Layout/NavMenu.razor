@@ -1,11 +1,7 @@
 @implements IDisposable
 @inject NavigationManager NavigationManager
-<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">QuantumEdge.com</a>
-    </div>
-</div>
 
+@* 
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
@@ -59,6 +55,66 @@
         </AuthorizeView>
     </nav>
 </div>
+ *@
+
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item sidebar-category">
+            <p>Navigation</p>
+            <span></span>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <i class="mdi mdi-view-quilt menu-icon"></i>
+                <span class="menu-title">Home</span>
+                <div class="badge badge-info badge-pill">2</div>
+            </NavLink>
+        </li>
+        <li class="nav-item sidebar-category">
+            <p>Manage</p>
+            <span></span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="mdi mdi-palette menu-icon"></i>
+                <span class="menu-title">Brokerage Accounts</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <NavLink class="nav-link" href="counter">Easy Equities</NavLink></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Alpaca</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pages/forms/basic_elements.html">
+                <i class="mdi mdi-view-headline menu-icon"></i>
+                <span class="menu-title">Portfolio</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pages/charts/chartjs.html">
+                <i class="mdi mdi-chart-pie menu-icon"></i>
+                <span class="menu-title">Analytics</span>
+            </a>
+        </li>
+     
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <i class="mdi mdi-account menu-icon"></i>
+                <span class="menu-title">Tools</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Portfolio Rebalancing </a></li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</nav>
 
 @code {
     private string? currentUrl;
