@@ -3,12 +3,8 @@ using QuantumEdge.Domain.Entities;
 
 namespace QuantumEdge.Infrastructure.EntityFramework;
 
-public class QuantumEdgeDbContext : DbContext
+public class QuantumEdgeDbContext(DbContextOptions<QuantumEdgeDbContext> options) : DbContext(options)
 {
-    public QuantumEdgeDbContext(DbContextOptions<QuantumEdgeDbContext> options) : base(options)
-    {
-        
-    }
     public DbSet<ApplicationUser> User { get; set; }
     public DbSet<Account> Account { get; set; }
 }

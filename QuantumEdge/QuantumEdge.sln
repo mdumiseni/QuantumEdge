@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{563C7D5A-8B3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{11DF770E-EAAF-45F9-BECA-C06BC4F1C5BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Domain", "QuantumEdge.Domain\QuantumEdge.Domain.csproj", "{9F0A8992-F7DE-4541-B710-1F3DF15CD164}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.Domain", "QuantumEdge.Domain\QuantumEdge.Domain.csproj", "{9F0A8992-F7DE-4541-B710-1F3DF15CD164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Application", "QuantumEdge.Applicatiuon\QuantumEdge.Application.csproj", "{39F92333-B2CB-4541-B0A1-6479BCB8A3C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.Application", "QuantumEdge.Applicatiuon\QuantumEdge.Application.csproj", "{39F92333-B2CB-4541-B0A1-6479BCB8A3C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.Infrastructure", "QuantumEdge.Infrastructure\QuantumEdge.Infrastructure.csproj", "{41EA96A2-8749-47B0-9FA9-D72095F98D6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.Infrastructure", "QuantumEdge.Infrastructure\QuantumEdge.Infrastructure.csproj", "{41EA96A2-8749-47B0-9FA9-D72095F98D6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.com", "QuantumEdge.com\QuantumEdge.com.csproj", "{C25CD7F7-794E-4560-B376-F2B0BF22B170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.com", "QuantumEdge.com\QuantumEdge.com.csproj", "{C25CD7F7-794E-4560-B376-F2B0BF22B170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
