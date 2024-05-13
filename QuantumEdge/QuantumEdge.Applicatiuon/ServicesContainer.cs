@@ -11,11 +11,9 @@ public static class ServicesContainer
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
-        var alpacaClient = Environments.Paper.GetAlpacaTradingClient(new SecretKey("",""));
-        services.AddSingleton<IAssetsService>(new AssetService(alpacaClient));
-        // services.AddTransient<IPositionService, PositionService>();
-        // services.AddTransient<IOrderService, OrderService>();
-        // services.AddTransient<IWishListService, WishListService>();
+        var alpacaClient =
+            Environments.Paper.GetAlpacaTradingClient(new SecretKey(configuration["AlpacaAccount:Api_Key"], configuration["AlpacaAccount:Api_Secret"]));
+        services.AddSingleton<IAccountService>(_ => new AccountService(alpacaClient));
         return services;
     }
 
