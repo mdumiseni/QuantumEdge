@@ -1,389 +1,743 @@
 ﻿@page "/"
 
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-12 col-xl-6 grid-margin stretch-card">
-                <div class="row w-100 flex-grow">
-                    <div class="col-md-12 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-title">Website Audience Metrics</p>
-                                <p class="text-muted">25% more traffic than previous week</p>
-                                <div class="row mb-3">
-                                    <div class="col-md-7">
-                                        <div class="d-flex justify-content-between traffic-status">
-                                            <div class="item">
-                                                <p class="mb-">Users</p>
-                                                <h5 class="font-weight-bold mb-0">93,956</h5>
-                                                <div class="color-border"></div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="mb-">Bounce Rate</p>
-                                                <h5 class="font-weight-bold mb-0">58,605</h5>
-                                                <div class="color-border"></div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="mb-">Page Views</p>
-                                                <h5 class="font-weight-bold mb-0">78,254</h5>
-                                                <div class="color-border"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <ul class="nav nav-pills nav-pills-custom justify-content-md-end" id="pills-tab-custom"
-                                            role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" id="pills-home-tab-custom" data-toggle="pill"
-                                                   href="#pills-health" role="tab" aria-controls="pills-home" aria-selected="true">
-                                                    Day
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="pills-profile-tab-custom" data-toggle="pill" href="#pills-career"
-                                                   role="tab" aria-controls="pills-profile" aria-selected="false">
-                                                    Week
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="pills-contact-tab-custom" data-toggle="pill" href="#pills-music"
-                                                   role="tab" aria-controls="pills-contact" aria-selected="false">
-                                                    Month
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <canvas id="audience-chart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                    <p class="card-title">Weekly Balance</p>
-                                    <p class="text-success font-weight-medium">20.15 %</p>
-                                </div>
-                                <div class="d-flex align-items-center flex-wrap mb-3">
-                                    <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">$22.736</h5>
-                                    <p class="text-muted mb-0">Avg Sessions</p>
-                                </div>
-                                <canvas id="balance-chart" height="130"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                    <p class="card-title">Today Task</p>
-                                    <p class="text-success font-weight-medium">45.39 %</p>
-                                </div>
-                                <div class="d-flex align-items-center flex-wrap mb-3">
-                                    <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.247</h5>
-                                    <p class="text-muted mb-0">Avg Sessions</p>
-                                </div>
-                                <canvas id="task-chart" height="130"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-6 grid-margin stretch-card">
-                <div class="row w-100 flex-grow">
-                    <div class="col-md-6 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-title">Regional Load</p>
-                                <p class="text-muted">Last update: 2 Hours ago</p>
-                                <div class="regional-chart-legend d-flex align-items-center flex-wrap mb-1"
-                                     id="regional-chart-legend"></div>
-                                <canvas height="280" id="regional-chart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body pb-0">
-                                <div class="d-flex align-items-center mb-4">
-                                    <p class="card-title mb-0 mr-1">Today activity</p>
-                                    <div class="badge badge-info badge-pill">2</div>
-                                </div>
-                                <div class="d-flex flex-wrap pt-2">
-                                    <div class="mr-4 mb-lg-2 mb-xl-0">
-                                        <p>Time On Site</p>
-                                        <h4 class="font-weight-bold mb-0">77.15 %</h4>
-                                    </div>
-                                    <div>
-                                        <p>Page Views</p>
-                                        <h4 class="font-weight-bold mb-0">14.15 %</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <canvas height="150" id="activity-chart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-md-12 stretch-card">
-                        <div class="card">
-                            <div class="card-body pb-0">
-                                <p class="card-title">Server Status 247</p>
-                                <div class="d-flex justify-content-between flex-wrap">
-                                    <p class="text-muted">Last update: 2 Hours ago</p>
-                                    <div class="d-flex align-items-center flex-wrap server-status-legend mt-3 mb-3 mb-md-0">
-                                        <div class="item mr-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="color-bullet"></div>
-                                                <h5 class="font-weight-bold mb-0">128GB</h5>
-                                            </div>
-                                            <p class="mb-">Total Usage</p>
-                                        </div>
-                                        <div class="item mr-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="color-bullet"></div>
-                                                <h5 class="font-weight-bold mb-0">92%</h5>
-                                            </div>
-                                            <p class="mb-">Memory Usage</p>
-                                        </div>
-                                        <div class="item mr-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="color-bullet"></div>
-                                                <h5 class="font-weight-bold mb-0">16%</h5>
-                                            </div>
-                                            <p class="mb-">Disk Usage</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <canvas height="170" id="status-chart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Financial management review</h4>
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            User
-                                        </th>
-                                        <th>
-                                            First name
-                                        </th>
-                                        <th>
-                                            Progress
-                                        </th>
-                                        <th>
-                                            Amount
-                                        </th>
-                                        <th>
-                                            Deadline
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face1.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            Herman Beck
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $ 77.99
-                                        </td>
-                                        <td>
-                                            May 15, 2015
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face2.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            Messsy Adam
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $245.30
-                                        </td>
-                                        <td>
-                                            July 1, 2015
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face3.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            John Richards
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $138.00
-                                        </td>
-                                        <td>
-                                            Apr 12, 2015
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face4.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            Peter Meggik
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $ 77.99
-                                        </td>
-                                        <td>
-                                            May 15, 2015
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face5.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            Edward
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $ 160.25
-                                        </td>
-                                        <td>
-                                            May 03, 2015
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face6.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            John Doe
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $ 123.21
-                                        </td>
-                                        <td>
-                                            April 05, 2015
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="images/faces/face7.jpg" alt="image" />
-                                        </td>
-                                        <td>
-                                            Henry Tom
-                                        </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $ 150.00
-                                        </td>
-                                        <td>
-                                            June 16, 2015
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- row end -->
-        <div class="row">
-            <div class="col-md-4 grid-margin stretch-card">
-                <div class="card bg-facebook d-flex align-items-center">
-                    <div class="card-body py-5">
-                        <div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
-                            <i class="mdi mdi-facebook text-white icon-lg"></i>
-                            <div class="ml-3 ml-md-0 ml-xl-3">
-                                <h5 class="text-white font-weight-bold">2.62 Subscribers</h5>
-                                <p class="mt-2 text-white card-text">You main list growing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-                <div class="card bg-google d-flex align-items-center">
-                    <div class="card-body py-5">
-                        <div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
-                            <i class="mdi mdi-google-plus text-white icon-lg"></i>
-                            <div class="ml-3 ml-md-0 ml-xl-3">
-                                <h5 class="text-white font-weight-bold">3.4k Followers</h5>
-                                <p class="mt-2 text-white card-text">You main list growing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-                <div class="card bg-twitter d-flex align-items-center">
-                    <div class="card-body py-5">
-                        <div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
-                            <i class="mdi mdi-twitter text-white icon-lg"></i>
-                            <div class="ml-3 ml-md-0 ml-xl-3">
-                                <h5 class="text-white font-weight-bold">3k followers</h5>
-                                <p class="mt-2 text-white card-text">You main list growing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- row end -->
-    </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:./partials/_footer.html -->
-    <footer class="footer">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
-                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- partial -->
+<div class="title pb-20">
+    <h2 class="h3 mb-0">Hospital Overview</h2>
 </div>
+
+<div class="row pb-10">
+    <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+        <div class="card-box height-100-p widget-style3">
+            <div class="d-flex flex-wrap">
+                <div class="widget-data">
+                    <div class="weight-700 font-24 text-dark">75</div>
+                    <div class="font-14 text-secondary weight-500">
+                        Appointment
+                    </div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon" data-color="#00eccf">
+                        <i class="icon-copy dw dw-calendar1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+        <div class="card-box height-100-p widget-style3">
+            <div class="d-flex flex-wrap">
+                <div class="widget-data">
+                    <div class="weight-700 font-24 text-dark">124,551</div>
+                    <div class="font-14 text-secondary weight-500">
+                        Total Patient
+                    </div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon" data-color="#ff5b5b">
+                        <span class="icon-copy ti-heart"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+        <div class="card-box height-100-p widget-style3">
+            <div class="d-flex flex-wrap">
+                <div class="widget-data">
+                    <div class="weight-700 font-24 text-dark">400+</div>
+                    <div class="font-14 text-secondary weight-500">
+                        Total Doctor
+                    </div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon">
+                        <i
+                            class="icon-copy fa fa-stethoscope"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+        <div class="card-box height-100-p widget-style3">
+            <div class="d-flex flex-wrap">
+                <div class="widget-data">
+                    <div class="weight-700 font-24 text-dark">$50,000</div>
+                    <div class="font-14 text-secondary weight-500">Earning</div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon" data-color="#09cc06">
+                        <i class="icon-copy fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row pb-10">
+    <div class="col-md-8 mb-20">
+        <div class="card-box height-100-p pd-20">
+            <div
+                class="d-flex flex-wrap justify-content-between align-items-center pb-0 pb-md-3"
+            >
+                <div class="h5 mb-md-0">Hospital Activities</div>
+                <div class="form-group mb-md-0">
+                    <select class="form-control form-control-sm selectpicker">
+                        <option value="">Last Week</option>
+                        <option value="">Last Month</option>
+                        <option value="">Last 6 Month</option>
+                        <option value="">Last 1 year</option>
+                    </select>
+                </div>
+            </div>
+            <div id="activities-chart"></div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-20">
+        <div
+            class="card-box min-height-200px pd-20 mb-20"
+            data-bgcolor="#455a64"
+        >
+            <div class="d-flex justify-content-between pb-20 text-white">
+                <div class="icon h1 text-white">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <!-- <i class="icon-copy fa fa-stethoscope" aria-hidden="true"></i> -->
+                </div>
+                <div class="font-14 text-right">
+                    <div><i class="icon-copy ion-arrow-up-c"></i> 2.69%</div>
+                    <div class="font-12">Since last month</div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+                <div class="text-white">
+                    <div class="font-14">Appointment</div>
+                    <div class="font-24 weight-500">1865</div>
+                </div>
+                <div class="max-width-150">
+                    <div id="appointment-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card-box min-height-200px pd-20" data-bgcolor="#265ed7">
+            <div class="d-flex justify-content-between pb-20 text-white">
+                <div class="icon h1 text-white">
+                    <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                </div>
+                <div class="font-14 text-right">
+                    <div><i class="icon-copy ion-arrow-down-c"></i> 3.69%</div>
+                    <div class="font-12">Since last month</div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+                <div class="text-white">
+                    <div class="font-14">Surgery</div>
+                    <div class="font-24 weight-500">250</div>
+                </div>
+                <div class="max-width-150">
+                    <div id="surgery-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 mb-20">
+        <div class="card-box height-100-p pd-20 min-height-200px">
+            <div class="d-flex justify-content-between pb-10">
+                <div class="h5 mb-0">Top Doctors</div>
+                <div class="dropdown">
+                    <a
+                        class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                        data-color="#1b3133"
+                        href="#"
+                        role="button"
+                        data-toggle="dropdown"
+                    >
+                        <i class="dw dw-more"></i>
+                    </a>
+                    <div
+                        class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+                    >
+                        <a class="dropdown-item" href="#"
+                        ><i class="dw dw-eye"></i> View</a
+                        >
+                        <a class="dropdown-item" href="#"
+                        ><i class="dw dw-edit2"></i> Edit</a
+                        >
+                        <a class="dropdown-item" href="#"
+                        ><i class="dw dw-delete-3"></i> Delete</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="user-list">
+                <ul>
+                    <li class="d-flex align-items-center justify-content-between">
+                        <div class="name-avatar d-flex align-items-center pr-2">
+                            <div class="avatar mr-2 flex-shrink-0">
+                                <img
+                                    src="vendors/images/photo1.jpg"
+                                    class="border-radius-100 box-shadow"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="txt">
+												<span
+                                                    class="badge badge-pill badge-sm"
+                                                    data-bgcolor="#e7ebf5"
+                                                    data-color="#265ed7"
+                                                >4.9</span
+                                                >
+                                <div class="font-14 weight-600">Dr. Neil Wagner</div>
+                                <div class="font-12 weight-500" data-color="#b2b1b6">
+                                    Pediatrician
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta flex-shrink-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary"
+                            >Schedule</a
+                            >
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between">
+                        <div class="name-avatar d-flex align-items-center pr-2">
+                            <div class="avatar mr-2 flex-shrink-0">
+                                <img
+                                    src="vendors/images/photo2.jpg"
+                                    class="border-radius-100 box-shadow"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="txt">
+												<span
+                                                    class="badge badge-pill badge-sm"
+                                                    data-bgcolor="#e7ebf5"
+                                                    data-color="#265ed7"
+                                                >4.9</span
+                                                >
+                                <div class="font-14 weight-600">Dr. Ren Delan</div>
+                                <div class="font-12 weight-500" data-color="#b2b1b6">
+                                    Pediatrician
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta flex-shrink-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary"
+                            >Schedule</a
+                            >
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between">
+                        <div class="name-avatar d-flex align-items-center pr-2">
+                            <div class="avatar mr-2 flex-shrink-0">
+                                <img
+                                    src="vendors/images/photo3.jpg"
+                                    class="border-radius-100 box-shadow"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="txt">
+												<span
+                                                    class="badge badge-pill badge-sm"
+                                                    data-bgcolor="#e7ebf5"
+                                                    data-color="#265ed7"
+                                                >4.9</span
+                                                >
+                                <div class="font-14 weight-600">Dr. Garrett Kincy</div>
+                                <div class="font-12 weight-500" data-color="#b2b1b6">
+                                    Pediatrician
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta flex-shrink-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary"
+                            >Schedule</a
+                            >
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between">
+                        <div class="name-avatar d-flex align-items-center pr-2">
+                            <div class="avatar mr-2 flex-shrink-0">
+                                <img
+                                    src="vendors/images/photo4.jpg"
+                                    class="border-radius-100 box-shadow"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="txt">
+												<span
+                                                    class="badge badge-pill badge-sm"
+                                                    data-bgcolor="#e7ebf5"
+                                                    data-color="#265ed7"
+                                                >4.9</span
+                                                >
+                                <div class="font-14 weight-600">Dr. Callie Reed</div>
+                                <div class="font-12 weight-500" data-color="#b2b1b6">
+                                    Pediatrician
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta flex-shrink-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary"
+                            >Schedule</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-20">
+        <div class="card-box height-100-p pd-20 min-height-200px">
+            <div class="d-flex justify-content-between">
+                <div class="h5 mb-0">Diseases Report</div>
+                <div class="dropdown">
+                    <a
+                        class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                        data-color="#1b3133"
+                        href="#"
+                        role="button"
+                        data-toggle="dropdown"
+                    >
+                        <i class="dw dw-more"></i>
+                    </a>
+                    <div
+                        class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+                    >
+                        <a class="dropdown-item" href="#"
+                        ><i class="dw dw-eye"></i> View</a
+                        >
+                        <a class="dropdown-item" href="#"
+                        ><i class="dw dw-edit2"></i> Edit</a
+                        >
+                        <a class="dropdown-item" href="#"
+                        ><i class="dw dw-delete-3"></i> Delete</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div id="diseases-chart"></div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12 mb-20">
+        <div class="card-box height-100-p pd-20 min-height-200px">
+            <div class="max-width-300 mx-auto">
+                <img src="vendors/images/upgrade.svg" alt="" />
+            </div>
+            <div class="text-center">
+                <div class="h5 mb-1">Upgrade to Pro</div>
+                <div
+                    class="font-14 weight-500 max-width-200 mx-auto pb-20"
+                    data-color="#a6a6a7"
+                >
+                    You can enjoy all our features by upgrading to pro.
+                </div>
+                <a href="#" class="btn btn-primary btn-lg">Upgrade</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-box pb-10">
+    <div class="h5 pd-20 mb-0">Recent Patient</div>
+    <table class="data-table table nowrap">
+        <thead>
+        <tr>
+            <th class="table-plus">Name</th>
+            <th>Gender</th>
+            <th>Weight</th>
+            <th>Assigned Doctor</th>
+            <th>Admit Date</th>
+            <th>Disease</th>
+            <th class="datatable-nosort">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo4.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Jennifer O. Oster</div>
+                    </div>
+                </div>
+            </td>
+            <td>Female</td>
+            <td>45 kg</td>
+            <td>Dr. Callie Reed</td>
+            <td>19 Oct 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Typhoid</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo5.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Doris L. Larson</div>
+                    </div>
+                </div>
+            </td>
+            <td>Male</td>
+            <td>76 kg</td>
+            <td>Dr. Ren Delan</td>
+            <td>22 Jul 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Dengue</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo6.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Joseph Powell</div>
+                    </div>
+                </div>
+            </td>
+            <td>Male</td>
+            <td>90 kg</td>
+            <td>Dr. Allen Hannagan</td>
+            <td>15 Nov 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Infection</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo9.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Jake Springer</div>
+                    </div>
+                </div>
+            </td>
+            <td>Female</td>
+            <td>45 kg</td>
+            <td>Dr. Garrett Kincy</td>
+            <td>08 Oct 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Covid 19</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo1.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Paul Buckland</div>
+                    </div>
+                </div>
+            </td>
+            <td>Male</td>
+            <td>76 kg</td>
+            <td>Dr. Maxwell Soltes</td>
+            <td>12 Dec 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Asthma</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo2.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Neil Arnold</div>
+                    </div>
+                </div>
+            </td>
+            <td>Male</td>
+            <td>60 kg</td>
+            <td>Dr. Sebastian Tandon</td>
+            <td>30 Oct 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Diabetes</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo8.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Christian Dyer</div>
+                    </div>
+                </div>
+            </td>
+            <td>Male</td>
+            <td>80 kg</td>
+            <td>Dr. Sebastian Tandon</td>
+            <td>15 Jun 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Diabetes</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-plus">
+                <div class="name-avatar d-flex align-items-center">
+                    <div class="avatar mr-2 flex-shrink-0">
+                        <img
+                            src="vendors/images/photo1.jpg"
+                            class="border-radius-100 shadow"
+                            width="40"
+                            height="40"
+                            alt=""
+                        />
+                    </div>
+                    <div class="txt">
+                        <div class="weight-600">Doris L. Larson</div>
+                    </div>
+                </div>
+            </td>
+            <td>Male</td>
+            <td>76 kg</td>
+            <td>Dr. Ren Delan</td>
+            <td>22 Jul 2020</td>
+            <td>
+									<span
+                                        class="badge badge-pill"
+                                        data-bgcolor="#e7ebf5"
+                                        data-color="#265ed7"
+                                    >Dengue</span
+                                    >
+            </td>
+            <td>
+                <div class="table-actions">
+                    <a href="#" data-color="#265ed7"
+                    ><i class="icon-copy dw dw-edit2"></i
+                        ></a>
+                    <a href="#" data-color="#e95959"
+                    ><i class="icon-copy dw dw-delete-3"></i
+                        ></a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="title pb-20 pt-20">
+    <h2 class="h3 mb-0">Quick Start</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-20">
+        <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+            <div class="img pb-30">
+                <img src="vendors/images/medicine-bro.svg" alt="" />
+            </div>
+            <div class="content">
+                <h3 class="h4">Services</h3>
+                <p class="max-width-200">
+                    We provide superior health care in a compassionate maner
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-20">
+        <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+            <div class="img pb-30">
+                <img src="vendors/images/remedy-amico.svg" alt="" />
+            </div>
+            <div class="content">
+                <h3 class="h4">Medications</h3>
+                <p class="max-width-200">
+                    Look for prescription and over-the-counter drug information.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-20">
+        <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+            <div class="img pb-30">
+                <img src="vendors/images/paper-map-cuate.svg" alt="" />
+            </div>
+            <div class="content">
+                <h3 class="h4">Locations</h3>
+                <p class="max-width-200">
+                    Convenient locations when and where you need them.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="footer-wrap pd-20 mb-20 card-box">
+    DeskApp - Bootstrap 4 Admin Template By
+    <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+</div>
+
