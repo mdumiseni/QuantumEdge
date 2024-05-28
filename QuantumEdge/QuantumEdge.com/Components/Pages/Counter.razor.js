@@ -1,5 +1,4 @@
 ﻿export function GetBarChart(div) {
-
     var myChart = echarts.init(div);
     var option;
 

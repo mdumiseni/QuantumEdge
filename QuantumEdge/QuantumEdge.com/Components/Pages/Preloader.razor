@@ -1,9 +1,14 @@
-﻿<div class="pre-loader">
+﻿@rendermode InteractiveServer
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+
+<div class="pre-loader">
     <div class="pre-loader-box">
         <div class="loader-logo">
             <img src="/vendors/images/deskapp-logo.svg" alt="" />
         </div>
-        <div class="loader-progress" id="progress_div">
+        <div @ref=@preLoader class="loader-progress" id="progress_div">
             <div class="bar" id="bar1"></div>
         </div>
         <div class="percent" id="percent1">0%</div>
@@ -12,5 +17,24 @@
 </div>
 
 @code {
+    private ElementReference preLoader;
+    private IJSObjectReference? module;
     
+    
+    protected override async  Task OnAfterRenderAsync(bool firstRender)
+    {
+
+        module = await JS.InvokeAsync<IJSObjectReference>("import", "./Components/Pages/Preloader.razor.js");
+
+        await module.InvokeVoidAsync("GetBarChart", preLoader);
+    }
+    
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+
 }
