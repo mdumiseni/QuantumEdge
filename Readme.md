@@ -18,7 +18,7 @@ To install QuantumEdge, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/quantumedge.git
+   [git clone https://github.com/yourusername/quantumedge.git](https://github.com/mdumiseni/QuantumEdge.git)
 2. Navigate to the project directory:
    ```sh
    cd quantumedge
