@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuantumEdge.Domain.Entities;
+using QuantumEdge.Domain.Entities.User;
 
 namespace QuantumEdge.Infrastructure.EntityFramework;
 

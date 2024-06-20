@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace QuantumEdge.Domain.Entities;
+namespace QuantumEdge.Domain.Entities.Common;
 
-public class BaseEntity<T>
+public interface IBaseEntity<T>
 {
     [Key]
     public T Id { get; set; }
