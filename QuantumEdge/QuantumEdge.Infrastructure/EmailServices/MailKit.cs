@@ -31,7 +31,7 @@ public class MailKit : IEmailService
         using var client = new SmtpClient();
 
         await client.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-        await client.AuthenticateAsync("mdumiseni.nyandu@gmail.com", "qxzk oaoh gaen park");
+        await client.AuthenticateAsync("mdumiseni.nyandu@gmail.com", "");
         await client.SendAsync(message);
         await client.DisconnectAsync(true);
 
