@@ -2,7 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QuantumEdge.Application.Interfaces.MessagingService;
+using QuantumEdge.Application.Interfaces.Repositories;
 using QuantumEdge.Infrastructure.EntityFramework;
+using QuantumEdge.Infrastructure.Repositories;
 
 namespace QuantumEdge.Infrastructure;
 
@@ -14,6 +16,7 @@ public static class ServiceContainer
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
         
         services.AddTransient<IEmailService, EmailServices.MailKit>();
+        services.AddTransient(typeof(IRepository<>),typeof(Repository<>));
         
         return services;
     }

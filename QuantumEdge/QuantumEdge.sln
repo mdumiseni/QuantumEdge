@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.Application", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.Infrastructure", "QuantumEdge.Infrastructure\QuantumEdge.Infrastructure.csproj", "{41EA96A2-8749-47B0-9FA9-D72095F98D6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumEdge.com", "QuantumEdge.com\QuantumEdge.com.csproj", "{C25CD7F7-794E-4560-B376-F2B0BF22B170}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumEdge.com", "QuantumEdge.com\QuantumEdge.com.csproj", "{CEF4374B-A1F4-44E9-ADD7-6C63A945654A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,10 @@ Global
 		{41EA96A2-8749-47B0-9FA9-D72095F98D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41EA96A2-8749-47B0-9FA9-D72095F98D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41EA96A2-8749-47B0-9FA9-D72095F98D6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C25CD7F7-794E-4560-B376-F2B0BF22B170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C25CD7F7-794E-4560-B376-F2B0BF22B170}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C25CD7F7-794E-4560-B376-F2B0BF22B170}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C25CD7F7-794E-4560-B376-F2B0BF22B170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF4374B-A1F4-44E9-ADD7-6C63A945654A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF4374B-A1F4-44E9-ADD7-6C63A945654A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF4374B-A1F4-44E9-ADD7-6C63A945654A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF4374B-A1F4-44E9-ADD7-6C63A945654A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,7 +45,7 @@ Global
 		{9F0A8992-F7DE-4541-B710-1F3DF15CD164} = {563C7D5A-8B39-4829-AA5F-50EA196D915F}
 		{39F92333-B2CB-4541-B0A1-6479BCB8A3C6} = {563C7D5A-8B39-4829-AA5F-50EA196D915F}
 		{41EA96A2-8749-47B0-9FA9-D72095F98D6C} = {563C7D5A-8B39-4829-AA5F-50EA196D915F}
-		{C25CD7F7-794E-4560-B376-F2B0BF22B170} = {563C7D5A-8B39-4829-AA5F-50EA196D915F}
+		{CEF4374B-A1F4-44E9-ADD7-6C63A945654A} = {563C7D5A-8B39-4829-AA5F-50EA196D915F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3F7895C-8A84-4BD2-A675-54F2EECA9FFA}

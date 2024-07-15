@@ -1,7 +1,13 @@
-﻿namespace QuantumEdge.Application.Interfaces.Repositories;
+﻿using System.Linq.Expressions;
 
-public interface IRepository<TEntity> where T : class
+namespace QuantumEdge.Application.Interfaces.Repositories;
+
+public interface IRepository<TEntity> where TEntity : class
 {
-
-    Task<TEntity> GetById
+    Task<TEntity?> GetById<TId>(TId id);
+    Task<IEnumerable<TEntity>> GetAll();
+    Task<IEnumerable<TEntity>?> GetAllByExpression(Expression<Func<TEntity, bool>> predicate);
+    Task<TEntity?> GetObjectByExpression(Expression<Func<TEntity, bool>> predicate);
+    Task Add(TEntity entity);
+    Task Update(TEntity entity);
 }

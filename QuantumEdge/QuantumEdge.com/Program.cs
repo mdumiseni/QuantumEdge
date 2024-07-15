@@ -1,3 +1,4 @@
+using MudBlazor.Services;
 using QuantumEdge.Application;
 using QuantumEdge.com.Components;
 using QuantumEdge.Domain;
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddMudServices();
 
 //builder.Services.AddDomainServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
@@ -27,6 +30,7 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();

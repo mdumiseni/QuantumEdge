@@ -1,6 +1,8 @@
-﻿namespace QuantumEdge.Application.Interfaces.Repositories;
+﻿using QuantumEdge.Domain.Entities.User;
 
-public interface IUserRepository
+namespace QuantumEdge.Application.Interfaces.Repositories;
+
+public interface IUserRepository : IRepository<ApplicationUser>
 {
     
 }
