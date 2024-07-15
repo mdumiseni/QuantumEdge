@@ -7,5 +7,6 @@ public interface IBaseEntity<T>
     [Key]
     public T Id { get; set; }
     public DateTime CreatedOnDateTime { get; set; }
+    public DateTime ModifiedOnDateTime { get; set; }
     public bool Deleted { get; set; }
 }
