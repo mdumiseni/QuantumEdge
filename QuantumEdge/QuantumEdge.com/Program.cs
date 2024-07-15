@@ -1,7 +1,6 @@
 using MudBlazor.Services;
 using QuantumEdge.Application;
 using QuantumEdge.com.Components;
-using QuantumEdge.Domain;
 using QuantumEdge.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
