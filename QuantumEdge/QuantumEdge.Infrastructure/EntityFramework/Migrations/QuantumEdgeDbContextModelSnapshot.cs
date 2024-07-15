@@ -34,21 +34,31 @@ namespace QuantumEdge.Infrastructure.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .HasColumnType("boolean");
 
+                    b.Property<DateTime>("ModifiedOnDateTime")
+                        .HasColumnType("timestamp with time zone");
+
                     b.HasKey("Id");
 
                     b.ToTable("Account");
                 });
 
-            modelBuilder.Entity("QuantumEdge.Domain.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("QuantumEdge.Domain.Entities.User.ApplicationUser", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
 
                     b.Property<string>("ConcurrencyStamp")
                         .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedOnDateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Email")
                         .HasColumnType("text");
@@ -60,6 +70,9 @@ namespace QuantumEdge.Infrastructure.EntityFramework.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("ModifiedOnDateTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("NormalizedEmail")
