@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39F92333-B2CB-4541-B0A1-6479BCB8A3C6}|QuantumEdge.Applicatiuon\\QuantumEdge.Application.csproj|c:\\users\\mdumi\\onedrive\\documents\\github\\quantumedge\\quantumedge\\quantumedge.applicatiuon\\services\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39F92333-B2CB-4541-B0A1-6479BCB8A3C6}|QuantumEdge.Applicatiuon\\QuantumEdge.Application.csproj|solutionrelative:quantumedge.applicatiuon\\services\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EA96A2-8749-47B0-9FA9-D72095F98D6C}|QuantumEdge.Infrastructure\\QuantumEdge.Infrastructure.csproj|c:\\users\\mdumi\\onedrive\\documents\\github\\quantumedge\\quantumedge\\quantumedge.infrastructure\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41EA96A2-8749-47B0-9FA9-D72095F98D6C}|QuantumEdge.Infrastructure\\QuantumEdge.Infrastructure.csproj|solutionrelative:quantumedge.infrastructure\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C25CD7F7-794E-4560-B376-F2B0BF22B170}|QuantumEdge.com\\QuantumEdge.com.csproj|c:\\users\\mdumi\\onedrive\\documents\\github\\quantumedge\\quantumedge\\quantumedge.com\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C25CD7F7-794E-4560-B376-F2B0BF22B170}|QuantumEdge.com\\QuantumEdge.com.csproj|solutionrelative:quantumedge.com\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C25CD7F7-794E-4560-B376-F2B0BF22B170}|QuantumEdge.com\\QuantumEdge.com.csproj|c:\\users\\mdumi\\onedrive\\documents\\github\\quantumedge\\quantumedge\\quantumedge.com\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C25CD7F7-794E-4560-B376-F2B0BF22B170}|QuantumEdge.com\\QuantumEdge.com.csproj|solutionrelative:quantumedge.com\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C25CD7F7-794E-4560-B376-F2B0BF22B170}|QuantumEdge.com\\QuantumEdge.com.csproj|c:\\users\\mdumi\\onedrive\\documents\\github\\quantumedge\\quantumedge\\quantumedge.com\\components\\layout\\leftsidebar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C25CD7F7-794E-4560-B376-F2B0BF22B170}|QuantumEdge.com\\QuantumEdge.com.csproj|solutionrelative:quantumedge.com\\components\\layout\\leftsidebar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,21 +30,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.Applicatiuon\\Services\\UserService\\UserService.cs",
+              "RelativeDocumentMoniker": "QuantumEdge.Applicatiuon\\Services\\UserService\\UserService.cs",
+              "ToolTip": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.Applicatiuon\\Services\\UserService\\UserService.cs",
+              "RelativeToolTip": "QuantumEdge.Applicatiuon\\Services\\UserService\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T21:04:18.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.Infrastructure\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "QuantumEdge.Infrastructure\\ServiceContainer.cs",
+              "ToolTip": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.Infrastructure\\ServiceContainer.cs",
+              "RelativeToolTip": "QuantumEdge.Infrastructure\\ServiceContainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T21:04:01.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.com\\Program.cs",
+              "RelativeDocumentMoniker": "QuantumEdge.com\\Program.cs",
+              "ToolTip": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.com\\Program.cs",
+              "RelativeToolTip": "QuantumEdge.com\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T20:02:18.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.com\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "QuantumEdge.com\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.com\\appsettings.Development.json",
+              "RelativeToolTip": "QuantumEdge.com\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-03T20:01:27.043Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "LeftSidebar.razor",
               "DocumentMoniker": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.com\\Components\\Layout\\LeftSidebar.razor",
               "RelativeDocumentMoniker": "QuantumEdge.com\\Components\\Layout\\LeftSidebar.razor",
               "ToolTip": "C:\\Users\\mdumi\\OneDrive\\Documents\\GitHub\\QuantumEdge\\QuantumEdge\\QuantumEdge.com\\Components\\Layout\\LeftSidebar.razor",
               "RelativeToolTip": "QuantumEdge.com\\Components\\Layout\\LeftSidebar.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-13T17:20:39.856Z",
               "EditorCaption": ""
