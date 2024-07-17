@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="_theme"/>
+<MudPopoverProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+<MudAppBar Color="Color.Primary" Fixed="false">
+    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" />
+    <MudSpacer />
+    <MudButton Variant="Variant.Filled" DropShadow="false" Href="auth/login" Color="Color.Primary">Sign in</MudButton>
+    <MudButton Variant="Variant.Outlined" Color="Color.Secondary">Sign up</MudButton>
+</MudAppBar>
+@Body
+@code {
+    private MudTheme _theme = QuantumTheme.GetQuantumTheme();
+}
