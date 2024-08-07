@@ -1,5 +1,4 @@
-﻿@page "/"
-@page "/dashboard"
+﻿@page "/easyEquities"
 @layout MainLayout
 
 <MudContainer Class="mt-5 px-8">
@@ -21,32 +20,30 @@
         </MudItem>
 
         <MudItem xs="12" lg="8" md="6" sm="6">
-                <MudDataGrid Items="@employees" Filterable="false" SortMode="@SortMode.None" Groupable="false">
-                    <Columns>
-                        <PropertyColumn Property="x => x.Name" />
-                        <PropertyColumn Property="x => x.Position" />
-                        <PropertyColumn Property="x => x.YearsEmployed" Title="Years Employed" />
-                        <PropertyColumn Property="x => x.Salary" Format="C" />
-                        <PropertyColumn Property="x => x.Salary * x.YearsEmployed" Title="Total Earned" Format="C" />
-                        <TemplateColumn CellClass="d-flex justify-end">
-                            <CellTemplate>
-                                <MudStack Row>
-                                    <MudRating Size="@Size.Small" SelectedValue="@context.Item.Rating" />
-                                    <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Primary">Hire</MudButton>
-                                </MudStack>
-                            </CellTemplate>
-                        </TemplateColumn>
-                    </Columns>
-                </MudDataGrid>
+            <MudDataGrid Items="@employees" Filterable="false" SortMode="@SortMode.None" Groupable="false">
+                <Columns>
+                    <PropertyColumn Property="x => x.Name" />
+                    <PropertyColumn Property="x => x.Position" />
+                    <PropertyColumn Property="x => x.YearsEmployed" Title="Years Employed" />
+                    <PropertyColumn Property="x => x.Salary" Format="C" />
+                    <PropertyColumn Property="x => x.Salary * x.YearsEmployed" Title="Total Earned" Format="C" />
+                    <TemplateColumn CellClass="d-flex justify-end">
+                        <CellTemplate>
+                            <MudStack Row>
+                                <MudRating Size="@Size.Small" SelectedValue="@context.Item.Rating" />
+                                <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Primary">Hire</MudButton>
+                            </MudStack>
+                        </CellTemplate>
+                    </TemplateColumn>
+                </Columns>
+            </MudDataGrid>
         </MudItem>
         <MudItem xs="12" lg="4" md="6" sm="6">
-            <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
-                <MudCard>
-                    <MudCardContent>
-                        
-                    </MudCardContent>
-                </MudCard>
-            </MudPaper>
+            <MudCard>
+                <MudCardContent>
+                    <FileUpload/>
+                </MudCardContent>
+            </MudCard>
         </MudItem>
     </MudGrid>
 </MudContainer>
