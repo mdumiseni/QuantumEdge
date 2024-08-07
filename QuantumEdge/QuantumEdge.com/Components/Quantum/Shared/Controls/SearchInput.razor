@@ -1,0 +1,17 @@
+﻿<MudItem xs="12" sm="6" md="4">
+    <MudAutocomplete T="string" Placeholder="Search here" Margin="Margin.Dense" OpenIcon="@Icons.Material.Filled.Search" @bind-Value="searchTerm" SearchFunc="@Search" Variant="Variant.Outlined" />
+</MudItem>
+
+@code {
+    private string searchTerm;
+
+    [Parameter] public List<string> dataList { get; set; }
+    
+    private async Task<IEnumerable<string>> Search(string value, CancellationToken token)
+    {
+        // if text is null or empty, show complete list
+        if (string.IsNullOrEmpty(value))
+            return dataList;
+        return dataList.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
+    }
+}

@@ -14,7 +14,6 @@ public interface IWishListService
     Task<ResultSet<IWatchList>> UpdateWishListByName(string name, string[] symbols);
     Task<ResultSet<IWatchList>> DeleteWishListById(Guid id);
     Task<ResultSet<IWatchList>> DeleteWishListByName(string name);
-
     Task<ResultSet<IWatchList>> AddAssetToWishListByWishListId(Guid wishListId, string symbol);
     Task<ResultSet<IWatchList>> AddAssetToWishListByWishListName(string name, string symbol);
     Task<ResultSet<IWatchList>> DeleteSymbolFromWishList(Guid wishListId, string symbol);
