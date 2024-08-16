@@ -1,4 +1,6 @@
-﻿@inject ISnackbar Snackbar
+﻿@using QuantumEdge.Application.Interfaces.BrokerServices.EasyEquitiesServices.Interfaces
+@inject ISnackbar Snackbar
+@inject ITransactionService TransactionService
 
 <MudStack Style="width: 100%">
     <MudFileUpload T="IReadOnlyList<IBrowserFile>"
@@ -58,6 +60,12 @@
     private string _dragClass = DefaultDragClass;
     private readonly List<string> _fileNames = new();
     private MudFileUpload<IReadOnlyList<IBrowserFile>>? _fileUpload;
+    
+    public string FileName { get; set; }
+    public long FileSize { get; set; }
+    public string FileType { get; set; }
+    public DateTimeOffset LastModified { get; set; }
+    const int MAX_FILE_SIZE = 5000 * 1024;
 
     private async Task ClearAsync()
     {
@@ -83,6 +91,29 @@
     {
         // Upload the files here
         Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+
+        foreach (var e in _fileUpload.Files)
+        {
+            try
+            {
+                var fileStream = e.OpenReadStream(MAX_FILE_SIZE);
+                var randomFile = Path.GetTempFileName();
+                var extension = Path.GetExtension(e.Name);
+                var targetFilePath = Path.ChangeExtension(randomFile, extension);
+
+                var targetStream = new FileStream(targetFilePath, FileMode.Create); 
+                fileStream.CopyToAsync(targetStream).ConfigureAwait(false).GetAwaiter().GetResult();
+                
+                targetStream.Close();
+
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
+        }
+        
         Snackbar.Add("TODO: Upload your files!");
     }
 

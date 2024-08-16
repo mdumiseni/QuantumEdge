@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QuantumEdge.Domain\QuantumEdge.Domain.csproj" />
+    <ProjectReference Include="..\QuantumEdge.Shared\QuantumEdge.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Alpaca.Markets" Version="7.1.0-beta4" />
+    <PackageReference Include="ClosedXML" Version="0.102.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="NewsAPI" Version="0.7.0" />
   </ItemGroup>
 
 </Project>
